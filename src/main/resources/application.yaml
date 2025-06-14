@@ -1,0 +1,32 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /gym
+spring:
+  application:
+    name: gym
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+  datasource:
+    url: jdbc:mysql://root:QpJdOWyvQzGPAItwUcnZPBWckCOvoRWc@caboose.proxy.rlwy.net:57422/railway
+    username: root
+    password: QpJdOWyvQzGPAItwUcnZPBWckCOvoRWc
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    open-in-view: false
+api:
+  prefix: api/v1
+jwt:
+  signerkey: 7vTOd5QE8JxKmoei9KsKzaAxAj8Tu11pBj5fcamcLfIk1rLBPn3MagjurQhEKxt4
+  valid-duration: 3600000
+  refresh-duration: 86400000
